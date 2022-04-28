@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Test;
 use Illuminate\Http\Request;
 
 class ProvaController extends Controller
@@ -43,9 +44,9 @@ class ProvaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Test $test)
     {
-        //
+        return view('prova.show', compact('test'));
     }
 
     /**
